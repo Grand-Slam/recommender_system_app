@@ -1,0 +1,13 @@
+<h1>총 단어 수 : {{length}} <!--총 글자의 수--></h1>
+
+<a href= "{%url 'wordcount'%}">home으로</a>
+<br>
+<h2>입력한 텍스트 : </h2>
+{{full}} <!--입력받은 전체 텍스트-->
+
+<h2>단어 카운트 : </h2>
+{% for key,value in dic %} <!--단어 : 단어가 나온 횟수-->
+
+{{key}} : {{value}}
+<br>
+{% endfor %}
